@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "YamaFont";
+    src: url("../../Media/Font/yamafont.eot");
+    src: url("../../Media/Font/yamafont.eot") format("embedded-opentype"),
+         url("../../Media/Font/yamafont.ttf") format("truetype"),
+         url("../../Media/Font/yamafont.woff") format("woff"),
+         url("../../Media/Font/yamafont.woff2") format("woff2");
+}
+
 :root {
     --accent-colour: rgb(210, 199, 150);
     --main-colour: rgb(228, 213, 193);
@@ -23,7 +32,7 @@ body {
     margin: 0 auto;
 
 
-    font-family: "Comic Sans MS", sans-serif;
+    font-family: "YamaFont", sans-serif;
     font-weight: bold;
     font-size: 7.5em;
     text-align: center;
