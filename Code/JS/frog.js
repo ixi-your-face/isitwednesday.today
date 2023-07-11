@@ -68,7 +68,7 @@ function AddFrog() {
         getRandomArbitrary(-1.2, 1.2),
         getRandomArbitrary(-1.2, 1.2),
         getRandomArbitrary(-1, 1),
-        getRandomArbitrary(1, 1.2),
+        getRandomArbitrary(0.75, 1.25),
         getRandomArbitrary(-100, 100)
     ));
 }
