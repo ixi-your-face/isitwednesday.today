@@ -3,10 +3,11 @@ let frogs = [];
 let baseSize = 69;
 
 class Frog {
-    constructor(x, y, velX, velY, rSpeed, size) {
+    constructor(x, y, velX, velY, rSpeed, size, index) {
         this.element = document.createElement("img");
         this.element.src = "Media/Images/frog.webp";
         this.element.style.width = `${baseSize * size}px`;
+        this.element.style.zIndex = `${Math.floor(index)}`;
         frogContainer.appendChild(this.element);
 
         this.x = x;
@@ -41,7 +42,7 @@ class Frog {
 
         this.element.style.left = `${this.x}px`;
         this.element.style.top = `${this.y}px`;
-        this.element.style.transform = ``;
+        this.element.style.transform = `translate(-50%, -50%) rotateZ(${this.rotation}deg)`;
     }
 }
 
@@ -63,15 +64,11 @@ window.requestAnimationFrame(Update);
 function AddFrog() {
     frogs.push(new Frog(
         getRandomArbitrary(0, window.innerWidth),
-        getRandomArbitrary(0, window.innerHeight),
+        -200,
         getRandomArbitrary(-1.2, 1.2),
         getRandomArbitrary(-1.2, 1.2),
         getRandomArbitrary(-1, 1),
-        getRandomArbitrary(1, 1.2)
+        getRandomArbitrary(1, 1.2),
+        getRandomArbitrary(-100, 100)
     ));
 }
-
-for(let i=0; i < 6; i++) {
-    AddFrog();
-}
-

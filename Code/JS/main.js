@@ -10,6 +10,12 @@ function flipYES() {
     removeClasses()
 
     main.classList.add("flip-yes");
+
+    setTimeout(() => {
+        for(let i=0; i < 20; i++) {
+            AddFrog();
+        }
+    }, 4000)
 }
 
 function flipNO() {

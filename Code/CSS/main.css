@@ -21,6 +21,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    z-index: 0;
     transform: translate(-50%, -50%);
     transform-style: preserve-3d;
 
@@ -34,7 +35,7 @@ body {
 
     font-family: "YamaFont", sans-serif;
     font-weight: bold;
-    font-size: 7.5em;
+    font-size: 11em;
     text-align: center;
 }
 
@@ -53,7 +54,7 @@ body {
 
 #no {
     transform: rotateZ(0deg);
-    z-index: 100;
+    z-index: 1;
     color: #ff0000;
 }
 
