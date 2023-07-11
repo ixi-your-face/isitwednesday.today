@@ -21,6 +21,13 @@ function flipYES() {
             AddFrog();
         }
 
+        for(let i=149; i > -1; i--) {
+            let div = document.createElement("div");
+            div.classList.add(`confetti-${i}`);
+
+            document.getElementsByClassName("confetti-wrapper")[0].appendChild(div);
+        }
+
         let duration = 500;
         if(Math.random() > 0.5) {
             PlayAudio('Media/Audio/airhorn.mp3');

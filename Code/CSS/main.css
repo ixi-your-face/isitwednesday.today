@@ -64,6 +64,11 @@ body {
     z-index: 1;
     color: #ff0000;
 }
+span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
 
 
 @keyframes flip-no {
@@ -90,6 +95,7 @@ body {
 .flip-no {
     animation: ease-in-out flip-no 4s forwards;
 }
+
 
 
 #landing {
