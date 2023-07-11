@@ -1,0 +1,73 @@
+:root {
+    --accent-colour: rgb(210, 199, 150);
+    --main-colour: rgb(228, 213, 193);
+}
+
+body {
+    background-color: var(--main-colour);
+}
+
+.main-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+
+    background-color: var(--accent-colour);
+    border-radius: 20px;
+    width: 40%;
+    height: 25%;
+    margin: 0 auto;
+
+
+    font-family: "Comic Sans MS", sans-serif;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+}
+
+.main-container div {
+    width: 100%;
+    height: 100%;
+
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+}
+
+#yes {
+    transform: rotateX(-180deg);
+    color: #1bce1b;
+}
+
+#no {
+    transform: rotateZ(0deg);
+    z-index: 100;
+    color: #ff0000;
+}
+
+
+@keyframes flip-no {
+    from {
+        transform: translate(-50%, -50%) rotateX(0);
+    }
+    to {
+        transform: translate(-50%, -50%) rotateX(3600deg);
+    }
+}
+@keyframes flip-yes {
+    from {
+        transform: translate(-50%, -50%) rotateX(0);
+    }
+    to {
+        transform: translate(-50%, -50%) rotateX(3780deg);
+    }
+}
+
+.flip-yes {
+    animation: ease-in-out flip-yes 4s forwards;
+}
+
+.flip-no {
+    animation: ease-in-out flip-no 4s forwards;
+}
