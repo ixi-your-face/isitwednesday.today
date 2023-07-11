@@ -5,6 +5,7 @@
 
 body {
     background-color: var(--main-colour);
+    overflow: hidden;
 }
 
 .main-container {
@@ -16,7 +17,8 @@ body {
 
     background-color: var(--accent-colour);
     border-radius: 20px;
-    width: 40%;
+    width: 25%;
+    min-width: 2.5em;
     height: 25%;
     margin: 0 auto;
 
