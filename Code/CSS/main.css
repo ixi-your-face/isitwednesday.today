@@ -1,3 +1,8 @@
+:root {
+    --accent-colour: rgb(210, 199, 150);
+    --main-colour: rgb(228, 213, 193);
+}
+
 @font-face {
     font-family: "YamaFont";
     src: url("../../Media/Font/yamafont.eot");
@@ -5,11 +10,6 @@
          url("../../Media/Font/yamafont.ttf") format("truetype"),
          url("../../Media/Font/yamafont.woff") format("woff"),
          url("../../Media/Font/yamafont.woff2") format("woff2");
-}
-
-:root {
-    --accent-colour: rgb(210, 199, 150);
-    --main-colour: rgb(228, 213, 193);
 }
 
 body {
@@ -61,10 +61,17 @@ body {
 }
 
 #no {
-    transform: rotateZ(0deg);
     z-index: 1;
     color: #ff0000;
 }
+
+#landing {
+    z-index: 200;
+}
+#landing span {
+    font-size: 0.5em;
+}
+
 span {
     display: inline-block;
     vertical-align: middle;
@@ -95,19 +102,4 @@ span {
 
 .flip-no {
     animation: ease-in-out flip-no 4s forwards;
-}
-
-
-
-#landing {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 200;
-
-    width: 100%;
-    height: 100%;
-
-    font-size: 0.5em;
 }
