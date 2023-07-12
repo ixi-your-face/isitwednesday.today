@@ -72,3 +72,5 @@ clicker.addEventListener("click", () => {
         flipNO();
     }
 })
+
+document.body.addEventListener('touchstart', function(e){ e.preventDefault(); });
